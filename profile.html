@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartBudget — Профиль</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="site-header">
+      <div class="header-left">
+        <h1 data-i18n="appTitle">SmartBudget</h1>
+        <p data-i18n="appSubtitle">Управляйте доходами и расходами простым способом.</p>
+      </div>
+      <div class="header-right">
+        <nav class="nav-links">
+          <a href="index.html" data-i18n="navHome">Главная</a>
+          <a href="profile.html" data-i18n="navProfile">Профиль</a>
+        </nav>
+        <label class="lang-label" for="language-select" data-i18n="languageLabel">Язык</label>
+        <select id="language-select" class="lang-selector"></select>
+      </div>
+    </header>
+
+    <section class="profile-card">
+      <h2 data-i18n="profileHeader">Личная страница</h2>
+      <p data-i18n="profileText">Здесь вы можете сохранить свое имя, цель и увидеть общее количество операций.</p>
+    </section>
+
+    <section class="profile-grid">
+      <article>
+        <h3 data-i18n="profileInfoTitle">Ваши данные</h3>
+        <form id="profile-form" class="profile-form">
+          <div class="form-group">
+            <label for="profile-name" data-i18n="labelName">Имя</label>
+            <input id="profile-name" type="text" placeholder="Иван Иванов" data-i18n-placeholder="placeholderName" />
+          </div>
+          <div class="form-group">
+            <label for="profile-email" data-i18n="labelEmail">Email</label>
+            <input id="profile-email" type="email" placeholder="example@mail.ru" data-i18n-placeholder="placeholderEmail" />
+          </div>
+          <div class="form-group">
+            <label for="profile-goal" data-i18n="labelGoal">Цель</label>
+            <input id="profile-goal" type="text" placeholder="Накопить на отпуск" data-i18n-placeholder="placeholderGoal" />
+          </div>
+          <button type="submit" data-i18n="saveProfileButton">Сохранить</button>
+        </form>
+      </article>
+
+      <article>
+        <h3 data-i18n="profileStatsTitle">Статистика</h3>
+        <p><span data-i18n="profileTransactionsCount">Операций</span>: <strong id="transaction-count">0</strong></p>
+        <p><span data-i18n="profileLastVisit">Последний визит</span>: <strong id="last-visit">—</strong></p>
+      </article>
+    </section>
+  </div>
+
+  <script src="translations.js"></script>
+  <script src="profile.js"></script>
+</body>
+</html>

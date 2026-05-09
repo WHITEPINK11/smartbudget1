@@ -31,6 +31,65 @@ header {
   padding: 24px 0 16px;
 }
 
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.header-left {
+  min-width: 220px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.nav-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 12px;
+  transition: background 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  background: rgba(37, 99, 235, 0.1);
+}
+
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lang-selector {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: #f9fafb;
+  font: inherit;
+}
+
+.lang-label {
+  font-weight: 600;
+}
+
 h1 {
   margin: 0 0 8px;
   font-size: clamp(2rem, 3vw, 3rem);
@@ -196,9 +255,44 @@ tbody tr:nth-child(even) {
   color: var(--muted);
 }
 
+.profile-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+  margin-bottom: 24px;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.profile-form {
+  display: grid;
+  gap: 16px;
+}
+
+.profile-card h2,
+.profile-grid h3 {
+  margin-top: 0;
+}
+
 @media (max-width: 640px) {
   .app-shell {
     padding: 16px;
+  }
+
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-right {
+    width: 100%;
+    justify-content: space-between;
   }
 
   th,
